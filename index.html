@@ -1,22 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Revibes Cafe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revibes Cafe and Restro | Cozy cafe in Kathmandu</title>
+  <meta name="description" content="Revibes Cafe and Resto is a cozy and modern hangout spot serving delicious food, refreshing beverages, and warm vibes in a relaxed atmosphere. Perfect for casual dining, friendly meetups, and memorable moments. Visit us today!">
+  <meta name="keywords" content="Cafe , Cafe near me, Aesthetic cafe , Coffee Shop near me, Cafe in Chundevi">
+  <meta name="author" content="Sahil Tharu">
+  <meta property="og:title" content="Revibes Cafe and Restro">
+  <meta property="og:description" content="Aesthetic cozy cafe and more. Visit us in Chundevi,Kathmandu.">
   <style>
+
+    html {
+      scroll-padding-top: 80px; 
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
     }
-    img {
-      width: 100%;
+
+    header {
+      background-color: #222;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 100%;
       height: auto;
-      display: block;
+      border-radius: 10px;
     }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #d35400;
+      color: white;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #d35400;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover, form button:hover {
+      background-color: #e67e22;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+
+    a.map-link {
+      color: #00aaff;
+      text-decoration: underline;
+    }
+
+    #menuImage img {
+      max-width: 90%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    #Reserve {
+  height: 50vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
   </style>
 </head>
 <body>
-  <img src="design.png" alt="Revibes Cafe Landing Page">
+
+  <header>
+    <h1>Revibes cafe and Restro</h1>
+    <nav>
+      <a href="#Home">Home</a>
+      <a href="#Menu">See Menu</a>
+      <a href="#Location">Location</a>
+      <a href="#Contact">Contact</a>
+
+    </nav>
+  </header>
+
+  <section id="Home" class="hero">
+    <img src="design.png" alt="Revibe cafe's Landing Image" />
+    <h2>Welcome to Revibes cafe and restro</h2>
+    <p>Aesthetic and cozy vibes at Chundevi, Kathmandu</p>
+  </section>
+
+  <section id="Menu">
+    <h2>Our Menu</h2>
+    <button id="menuToggleBtn">See Full Menu</button>
+    <div id="menuImage" style="display: none;">
+      <img src="menu1.jpg" alt="Revibes cafe Menu">
+      <img src="menu2.jpeg" alt="Revibes cafe Menu">
+      <img src="menu3.jpeg" alt="Revibes cafe Menu">
+      <img src="menu4.jpeg" alt="Revibes cafe Menu">
+      <img src="menu5.jpeg" alt="Revibes cafe Menu">
+    </div>
+  </section>
+
+  <section id="Location">
+    <h2>Find Us</h2>
+    <p>Chundevi, Kathmandu</p>
+    <div style="margin-top: 20px;">
+      <iframe 
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.410164083924!2d85.3350783755415!3d27.735492276166383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19001b5e0619%3A0x3a0f409f7fc40511!2sRevibes%20cafe%20and%20restro!5e0!3m2!1sen!2snp!4v1754405966626!5m2!1sen!2snp" 
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <p style="margin-top: 10px;">
+      <a href="https://maps.app.goo.gl/qKH8zh7EWyFtzieq5" target="_blank" class="map-link">Open in Google Maps</a>
+    </p>
+  </section>
+  
+  <section id="Contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <p class="text-center">📍 Chundevi, Kathmandu<br>📞 +977-981955-6623<br>✉ revibescafe@example.com</p>
+  </div>
+</section>
+
+
+  <footer>
+    &copy; 2025 Revibes cafe and Restro. All rights reserved.
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    document.getElementById("menuToggleBtn").addEventListener("click", function () {
+      var img = document.getElementById("menuImage");
+      if (img.style.display === "none" || img.style.display === "") {
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
